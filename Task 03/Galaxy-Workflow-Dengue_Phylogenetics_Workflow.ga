@@ -1,0 +1,79 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "comments": [],
+    "format-version": "0.1",
+    "name": "Dengue_Phylogenetics_Workflow",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "sequences (1).fasta"
+                }
+            ],
+            "label": "sequences (1).fasta",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 10,
+                "top": 10
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"tag\": null}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "cb6593d8-385a-4ada-9f8c-1f98d540c4a7",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "1": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/7.526+galaxy2",
+            "errors": null,
+            "id": 1,
+            "input_connections": {
+                "input|batches_0|inputs": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "MAFFT",
+            "outputs": [
+                {
+                    "name": "outputAlignment",
+                    "type": "fasta"
+                }
+            ],
+            "position": {
+                "left": 230,
+                "top": 10
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/7.526+galaxy2",
+            "tool_shed_repository": {
+                "changeset_revision": "0a507f4bd19a",
+                "name": "mafft",
+                "owner": "rnateam",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"input\", \"anysymbol\": false, \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"datatype_selection\": {\"datatype\": \"--nuc\", \"__current_case__\": 1, \"scoring_matrix\": {\"type\": \"--kimura\", \"__current_case__\": 0, \"coefficient\": \"200\"}, \"fmodel\": false, \"gap_costs\": {\"use_defaults\": \"yes\", \"__current_case__\": 0}}, \"flavour\": {\"type\": \"mafft-fftns\", \"__current_case__\": 2}, \"input\": {\"mapping\": \"implicit\", \"__current_case__\": 0, \"batches\": [{\"__index__\": 0, \"inputs\": null}]}, \"outputFormat\": \"\", \"reorder\": false, \"seed\": null, \"treeout\": false, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_uuid": null,
+            "tool_version": "7.526+galaxy2",
+            "type": "tool",
+            "uuid": "0c6ed2c4-baf6-4d12-a69d-9613513a97df",
+            "when": null,
+            "workflow_outputs": []
+        }
+    },
+    "tags": [],
+    "uuid": "c496d52b-645f-4375-bb2f-d7244e4b88ce",
+    "version": 0
+}
